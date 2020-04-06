@@ -12,10 +12,10 @@ var manifest *model.Manifest
 
 const manifestStr = `
 {
-  "id": "com.mattermost.plugin-starter-template",
-  "name": "Plugin Starter Template",
+  "id": "com.github.muratbayan.mattermost-quickchart",
+  "name": "Quickchart",
   "description": "This plugin serves as a starting point for writing a Mattermost plugin.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "min_server_version": "5.12.0",
   "server": {
     "executables": {
@@ -25,13 +25,19 @@ const manifestStr = `
     },
     "executable": ""
   },
-  "webapp": {
-    "bundle_path": "webapp/dist/main.js"
-  },
   "settings_schema": {
     "header": "",
     "footer": "",
-    "settings": []
+    "settings": [
+      {
+        "key": "TestConfigItem",
+        "display_name": "Test Config Item",
+        "type": "text",
+        "help_text": "Just a config Item - String",
+        "placeholder": "",
+        "default": "WirSindDieRoboter"
+      }
+    ]
   }
 }
 `
